@@ -1,1 +1,1 @@
-# MINI-PROJECT
+# MINI-PROJECT (Terminal / Desktop) only

@@ -79,31 +79,7 @@ footer {
   margin: 10px;
   background-color: white;
 }
-.w:hover{
-  border: 10px solid #ff0000;
-  color: #ff0000;
+.drum:hover{
+  border: 10px solid #979696;
 }
-.a:hover{
-  border: 10px solid #ffa500;
-  color: #ffa500;
-}
-.s:hover{
-  border: 10px solid #ffff00;
-  color: #ffff00;
-}
-.d:hover{
-  border: 10px solid #008000;
-  color: #008000;
-}
-.j:hover{
-  border: 10px solid #0000ff;
-  color: #0000ff;
-}
-.k:hover{
-  border: 10px solid #4b0082;
-  color: #4b0082;
-}
-.l:hover{
-  border: 10px solid #ee82ee;
-  color: #ee82ee;
-}
+

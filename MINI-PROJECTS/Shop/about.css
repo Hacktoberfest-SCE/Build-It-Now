@@ -1,0 +1,27 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Noto Serif', serif;
+}
+header{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    height:53px;
+
+}
+
+.content{
+    text-align: center;
+    font-size: 15px;
+    border:2px solid black;
+    padding: 3px 10px;;
+   border-radius: 10px;
+    width: 83vw;
+    margin:auto;
+    background-color: antiquewhite;
+    padding-top: 30px;
+}
+.content>p{
+    height: 83px;
+}

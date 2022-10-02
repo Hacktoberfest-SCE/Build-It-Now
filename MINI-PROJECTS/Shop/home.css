@@ -1,0 +1,122 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+    transition: all 100ms ease-in-out 100ms;
+}
+.nav{
+    position: sticky;
+    top:0px;
+}
+
+.navlist {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffe9c2;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    /* position: sticky;
+    top: 2px; */
+}
+
+.nav>ul>li {
+    list-style: none;
+    margin: 6px 36px;
+    padding-top: 8px;
+    font-size: 22px;
+}
+.nav>ul>li:hover {
+   transform: translateY(-7px);
+}
+
+.navlist>li>a {
+    padding: 3px 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.navlist>li>a:hover {
+    background-color: rgb(209, 164, 108);
+    color: white;
+    border-radius: 5px;
+}
+.navlist>li>a.active{
+    background-color: rgb(209, 164, 108);
+    color: white;
+    border-radius: 5px;
+    transform: translateY(-7px);
+
+}
+
+.navlist input {
+    position:absolute;
+    right: 10px;
+    top: 5px;
+    height: 24px;
+    width: 340px;
+    text-align: 10px;
+    border-radius: 5px;
+    border-color: rgb(237, 166, 79);
+
+}
+
+.content1 {
+    margin: 7px 63px;
+    padding-top: 50px;
+}
+
+.pr1 {
+    display: inline-block;
+    text-align: center;
+}
+
+.content1 img {
+    height: 230px;
+    width: 281px;
+    /* border: 1px solid black; */
+    margin: 2px 32px;
+    cursor: pointer;
+    /* box-shadow: -5px 3px 20px #b5ad9f; */
+}
+
+.pr1>img:hover{
+transform: scale(1.08);
+z-index: -1;
+box-shadow: -5px 3px 20px #dcd9d4;
+}
+
+.img1 {
+    width: 100vw;
+}
+
+.heading {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100;
+    padding-top: 14px ;
+}
+.special{
+    margin: 7px 118px;
+    padding: 0px 334px;
+    /* border: 2px solid bisque; */
+}
+
+.special:hover{
+    box-shadow: -5px 3px 20px #dcd9d4;
+    z-index: -1;
+}
+.special img{
+    width: 41rem;
+    height: 16rem;
+    cursor: pointer;
+}
+.special img:hover{
+    transform: scale(1.08);
+}
+.price{
+    text-align: center;
+    margin-top:-7px;
+    font-size: 20px;
+}

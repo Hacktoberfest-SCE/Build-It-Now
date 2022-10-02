@@ -1,0 +1,18 @@
+*{
+    margin:0px;
+    padding:0px;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+}
+.head{
+    text-align: center;
+    font-size: 30px;
+}
+.cont{
+    font-size: 24px;
+}
+button{
+    border-radius: 10px;
+    padding:2px 5px;
+    cursor: pointer;
+}

@@ -47,6 +47,10 @@ function buttonClick(key){
       var kick=new Audio('sounds/kick-bass.mp3');
       kick.play();
       break;
+    case "m":
+      var m1=new Audio('sounds/M1.mp3');
+      m1.play();
+      break;
     default:
       console.log(innerHtml);
   }

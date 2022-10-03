@@ -44,6 +44,10 @@ footer {
   background-image: url('images/kick.png');
 }
 
+.m {
+  background-image: url('images/m1.png');
+}
+
 .set {
   margin: 10% auto;
 }

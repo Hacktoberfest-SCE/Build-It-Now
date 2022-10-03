@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <noscript>github - @nightfury-crypto</noscript>
+    <div class="container">
+        <div class="hour" style="color: rgb(160, 0, 32);">09</div>
+        <span>:</span>
+        <div class="minutes" style="color: rgb(10, 0, 124);">33</div>
+        <span>:</span>
+        <div class="seconds" style="color: rgb(0, 0, 0);">27</div>
+    </div>
+
+    <script>
+        const hour = document.querySelector('.hour');
+        const min = document.querySelector('.minutes');
+        const sec = document.querySelector('.seconds');
+        setInterval(() => {
+            let time = new Date();
+            let hourt = time.getHours();
+            let mint = time.getMinutes();
+            let sect = time.getSeconds();
+            if (hourt < 10) {hourt = 0 + '' + hourt}
+            if (mint < 10) {mint = 0 + '' + mint}
+            if (sect < 10) {sect = 0 + '' + sect}
+            hour.innerText = hourt;min.innerText = mint;
+            sec.innerText = sect;
+        }, 1000)
+    </script>
+</body>
+
+</html>

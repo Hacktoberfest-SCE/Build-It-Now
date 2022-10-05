@@ -1,0 +1,79 @@
+body{
+    background-color: #232323;
+    margin: 0;
+    font-family: "Montserrat",'Avenir',sans-serif ;
+}
+div.container{
+    max-width: 600px;
+    margin: 20px auto;
+}
+div.square{
+    width: 30%;
+    background-color: purple;
+    padding-bottom: 30%;
+    float:left;
+    margin:1.66%;/*gap between them*/
+    border-radius:15%;
+    transition: background 0.7s;
+    --webkit-transition:background 0.7s;
+    --moz-transition:background 0.7s;
+}
+h1{
+    color:white;
+    text-align: center;
+    line-height: 1.1;
+    background-color:steelblue;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+div#stripe{
+    background-color: white;
+    height: 30px;
+    text-align: center;
+    color:black;
+}
+#colorDisplay{
+    font-size:200%;
+}
+.selected{
+    background-color: steelblue;
+    color: white;
+}
+button{
+    border:none;
+    background:none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:steelblue;
+    height:100%;
+    letter-spacing: 1px;
+    font-size:inherit;
+}
+button:hover{
+    color:white;
+    background-color: steelblue;
+    transition: all 0.5s;
+    --webkit-transition:all 0.5s;
+    --moz-transition:all 0.5s;
+    /*transitions will be now supported by all the browsers */
+}
+button:focus{
+    border:none;
+    outline: none;
+    color: white;
+}
+button#reset{
+    color:steelblue;
+    background:none;
+}
+button#reset:hover{
+    color: white;
+    background-color: steelblue;
+}
+span#message{
+    display: inline-block;
+    width: 20%;
+}

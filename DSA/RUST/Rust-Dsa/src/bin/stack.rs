@@ -4,7 +4,8 @@ fn main() {
     let mut s1: Stack<i64> = Stack::new(1);
     Stack::<i64>::process_instruction::<&str, &str>(s1.push(5));
     Stack::<i64>::process_instruction::<&str, &str>(s1.push(8));
-    Stack::<i64>::process_instruction::<i64, &str>(s1.pop());
+    Stack::<i64>::process_instruction::<&str, &str>(s1.push(10));
+    s1.display();
 }
 
 #[derive(Debug)]
@@ -16,7 +17,7 @@ struct Stack<T: Debug> {
 impl<T: Debug> Stack<T> {
     fn new(capacity: i64) -> Self {
         Self {
-            stack: Vec::new(),
+            stack: Vec::with_capacity(capacity as usize),
             capacity: capacity,
         }
     }
@@ -38,9 +39,9 @@ impl<T: Debug> Stack<T> {
         }
     }
 
-    fn display(&self) {
+    fn display(&self) -> Result<(), &str> {
         if self.stack.len() == 0 {
-            println!("STACK EMPTY!");
+            Err("STACK EMPTY!")
         } else {
             let line = "-------";
             for i in self.stack.iter().rev() {
@@ -48,6 +49,7 @@ impl<T: Debug> Stack<T> {
                 println!("   {:?}", i);
             }
             println!("{}", line);
+            Ok(())
         }
     }
 
@@ -56,5 +58,33 @@ impl<T: Debug> Stack<T> {
             Ok(data) => println!("{:?}", data),
             Err(t) => println!("{:?}", t),
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_push() {
+        let mut s: Stack<u32> = Stack::new(5);
+        assert_eq!(Ok("Data pushed to stack"), s.push(3));
+    }
+    #[test]
+    fn test_stack_underflow() {
+        let mut s: Stack<u8> = Stack::new(1);
+        assert_eq!(s.pop(), Err("STACK UNDERFLOW!"));
+    }
+    #[test]
+    fn test_stack_overflow() {
+        let mut s: Stack<u8> = Stack::new(1);
+
+        s.push(1).unwrap();
+        s.push(10).unwrap();
+        assert_eq!(s.push(5), Err("STACK OVERFLOW!"));
+    }
+    #[test]
+    fn test_display() {
+        let mut s: Stack<u8> = Stack::new(1);
+        assert_eq!(s.display(), Err("STACK EMPTY!"));
     }
 }

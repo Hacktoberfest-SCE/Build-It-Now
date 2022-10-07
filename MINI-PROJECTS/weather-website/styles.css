@@ -1,0 +1,445 @@
+* {
+  text-decoration: none;
+}
+
+body {
+  background: #3585DA;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+
+.nav-item {
+  display: inline-block;
+}
+
+.navbar-nav ml-auto {
+  text-align: right;
+}
+
+.navbar {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.navbar-brand {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.color-link {
+  color: rgb(8, 8, 8);
+}
+
+.row{
+  justify-content: space-around;
+}
+
+.row h1 {
+  font-weight: 600;
+  margin-top: 2.3em;
+  margin-left: 4em;
+  padding-left: em;
+}
+
+.container {
+  display: flex;
+  place-content: space-between;
+  margin: 0px;
+  padding-left: 150px;
+}
+
+.image-paper {
+  width: 19em;
+  height: 19em;
+  border-radius: 2em;
+  margin-left: 9em;
+  margin-right: 9em;
+  margin-top: 8em;
+}
+
+.height {
+  height: 30vh;
+}
+
+.container .input {
+  border: 0;
+  outline: none;
+  color: #8b7d77;
+}
+
+.search_wrap {
+  width: 200px;
+  margin-top: 100px;
+  margin-left: 250px;
+  margin-right: 1000px;
+  margin-bottom: 50px;
+  padding-right: 100px;
+}
+
+.search_wrap .search_box {
+  position: relative;
+  width: 800px;
+  height: 60px;
+}
+
+.search_wrap .search_box .input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+}
+
+.search_wrap .search_box .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.search_wrap .search_box .btn:hover {
+  background: #354259;
+}
+
+.search_wrap .search_box .btn.btn_common .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 30px;
+}
+
+.search_wrap.search_wrap_6 .search_box .btn {
+  width: 125px;
+  height: 60px;
+  border-radius: 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_wrap.search_wrap_6 .search_box .btn {
+  border-radius: 25px;
+}
+
+.search_wrap.search_wrap_5 .search_box .input {
+  padding-right: 145px;
+}
+
+/*Open Weather API Result section Style*/
+
+#api-result {
+  padding: 150px;
+}
+
+.namecity{
+  display: inline;
+  
+}
+
+.countrycode{
+  padding-left: 10px;
+  display: inline;
+}
+
+.searchweathericon {
+  width: 40px;
+  height: 40px;
+}
+
+.api-city-name-parent {
+  padding-left: 2%;
+  padding-right: 50%;
+
+}
+
+.api-main-dashboard-parent{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 25px;
+  padding-right: 50px;
+  margin-left: -5px;
+}
+
+.api-temp h1{
+  margin: 0px;
+  padding: 0px;
+  font-size: 80px;
+}
+
+.api-temp-advice{
+  padding: 70px, 20px;
+  margin: 10px, 40px;
+}
+
+.api-temp-advice h2, h3{
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.api-city-name {
+  background-color: #fcf0f0;
+  border-radius: 20px;
+}
+
+.api-dashboard {
+  background-color: #fcf0f0;
+  border-radius: 20px;
+}
+
+.api-temp {
+  padding: 100px 40px 100px 40px;
+}
+
+.api-temp-advice {
+  padding: 70px 40px 70px 20px;
+}
+
+.weather-icon-api-parent {
+  padding: px;
+  margin: 0%;
+}
+
+.apicloudicon {
+  width: 300px;
+  height: 300px;
+}
+
+.air-index {
+  padding: 25px;
+  width: fit-content;
+}
+
+.air-quality-index {
+  background-color: #fae6b3;
+  font-size: 40px;
+  border-radius: 10px;
+}
+
+.air-quality-icon-space {
+  background-color: #fcf0f0;
+  border-radius: 20px;
+}
+
+.air-quality-icon-space h1{
+  margin-top: 12px;
+}
+
+.AQI-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.wind-speed-img {
+  width: 350px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.uv-radition-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+
+/*About-us Section style*/
+
+#about-section {
+  padding-bottom: 35px;
+}
+
+.about-heading {
+  padding-left: 120px;
+}
+
+.about-heading h1 {
+  width: fit-content;
+  font-size: 50px;
+}
+
+.about-row {
+  text-align: center;
+}
+
+.about-img {
+  height: 25rem;
+  width: 28rem;
+}
+
+.car-back {
+  border-radius: 20px;
+}
+
+.card-body {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-top: 45px;
+}
+.about-harsh-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+  position: absolute;
+  top: -100px;
+  left: 70px;
+}
+
+.about-shyam-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  position: absolute;
+  top: -100px;
+  left: 70px;
+}
+
+.about-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.about-pad1 {
+  padding: 100px;
+  padding-top: 130px;
+}
+
+.about-pad2 {
+  padding: 100px;
+  padding-top: 130px;
+}
+
+.about-pad3 {
+  padding: 100px;
+}
+/*Footer Section*/
+.Parent-footer {
+  position: relative;
+}
+
+.footer-tbox-parent-back {
+  position: absolute;
+  top: -80px;
+  left: 35px;
+  right: 35px;
+  z-index: 9;
+}
+
+.footer-tbox {
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.footer-tbox-back {
+  background-color: #fae6b3;
+  border-radius: 10px;
+  margin-bottom: 0px;
+}
+
+.footer-main-heading {
+  padding-left: 121px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.footer-main-button {
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 170px;
+}
+
+.footer-section-background {
+  text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.footer-section-background hr {
+  margin: 0px;
+  width: 100%;
+  height: 2px;
+}
+
+.footer-feature-box {
+  text-align: left;
+}
+
+.footer-fbox-pad1 {
+  padding-left: 300px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: fit-content;
+}
+
+.footer-fbox-pad1 h4 {
+  width: fit-content;
+}
+
+.footer-fbox-pad1 ul {
+  width: fit-content;
+}
+
+.footer-fbox-pad2 {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: fit-content;
+}
+
+.footer-fbox-pad2 h4 {
+  width: fit-content;
+}
+
+.footer-fbox-pad2 ul {
+  width: fit-content;
+}
+
+.footer-fbox-pad3 {
+  padding-left: 100px;
+  padding-right: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-feature-box ul {
+  padding: 0%;
+}
+
+.footer-line {
+  padding: 11px;
+}
+
+.copyright-pad {
+  padding-bottom: 11px;
+  padding-left: 200px;
+  padding-right: 350px;
+}

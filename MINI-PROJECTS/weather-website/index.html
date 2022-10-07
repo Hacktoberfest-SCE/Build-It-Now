@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Weather.io</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  
+    <!--font--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    
+    
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Js -->
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Font and icon-->
+    
+    <script
+      src="https://kit.fontawesome.com/2e54ebecf6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    
+    <!--Landing Page-->
+
+    <section id="hero-section">
+      <div class="container-fluid pt-3">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5">
+        <a class="navbar-brand display-1" href="">Weather.io</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse nav justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item color-link">
+              <a class="nav-link" href="">Climate</a>
+            </li>
+            <li class="nav-item color-link">
+              <a class="nav-link" href="">Services</a>
+            </li>
+            <li class="nav-item color-link">
+              <a class="nav-link" href="">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </nav>
+  
+    
+      <div class="row px-4">
+        <div class="col-lg-6 landing-page-heading">
+          <h1 class="display-4">Provide you a world wide weather forecast</h1>
+        </div>
+        <div class="col-lg-6 landing-page-img">
+
+          <img class="image-paper" src="Assets/Hero_section_img.jpg" alt="Main Image"/>
+        </div>
+       </div>
+     </div>
+
+      <div class="container">
+        <div class="search_wrap search_wrap_6">
+          <div class="search_box">
+            <input type="text" class="input inputvalue" placeholder="Enter city name">
+            <div class="submit-button btn btn_common">
+                        <P style="margin-bottom: 0;">Search</P>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!--Open Weather API result -->
+        
+       <!--Section 2-->
+        <section id="api-result">
+          
+            <div class="api-city-name-parent">
+            <div class="row api-city-name">
+               <div class="col-lg-6 col-sm-6">
+                <img class="searchweathericon" src="Assets/cloud-computing.png" alt="iweather-icon">
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                  <h3 class="namecity"></h3>
+                  <h3 class="countrycode">IN</h3>
+               </div>
+             </div>
+            </div>
+          
+          
+          <div class="api-main-dashboard-parent">
+            <div class="row api-dashboard">
+              <div class="api-temp col-lg-4 col-sm-4 col-xs-4">
+                 <h1 class="temp-city metric">41°C</h1>
+              </div>
+              <div class="api-temp-advice col-lg-4 col-sm-4 col-xs-4">
+                <h2 class="desc-city">Very hot outside</h2>
+                <h3 class="advice">Stay hydrated, wear full clothes</h3>
+              </div>
+              <div class="weather-icon-api-parent col-lg-4 col-sm-4 col-xs-4">
+                  <img class="apicloudicon" src="Assets/Weather icon/static/day.svg" alt="icon">
+              </div>
+             </div>
+           </div>
+          
+          <div>
+            <div class="row">
+              <div class="air-index col-lg-4 col-sm-4 col-xs-4">
+                 <div class="air-quality-index" >
+                  <span>Humidity Level</span>
+                 </div>
+                 <div class="air-quality-icon-space">
+                   <h1 class="humidity">0</h1>
+                 </div>
+              </div>
+              <div class="air-index col-lg-4 col-sm-4 col-xs-4">
+                <div class="air-quality-index" >
+                   <span>Wind Speed</span>
+                </div>
+                <div class="air-quality-icon-space">
+                  <h1 class="wind-speed">27</h1>
+                </div>
+             </div>
+             <div class="air-index col-lg-4 col-sm-4 col-xs-4">
+              <div class="air-quality-index" >
+                 <span>Sea Level</span>
+              </div>
+              <div class="air-quality-icon-space">
+                <h1 class="sealevel">0</h1>
+              </div>
+           </div>
+          </div>
+
+        </section>
+
+    <!--About-->
+        
+       <!--Section 3-->
+        <section id="about-section">
+           <div class="about-heading">
+             <h1><u>About us</u></h1>
+           </div>
+           <div>
+            <div class="row about-row">
+                 <div class="feature-box col-lg-4 col-sm-4 about-pad1">
+                  <div class="card car-back" style="width: 18rem;">
+                    <div class="about-harsh-pic">
+                      <img class="card-img-top harsh-pic" src="" alt="">
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title"></h3>
+                      <p class="card-text">
+                        <h5>[ Front-end developer ]</h5></p>
+                        <div class="row">
+                          <div class="feature-box-pad feature-box col-lg-4 col-sm-4">
+                            <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                          </div>
+                          <div class="feature-box-pad feature-box col-lg-4 col-sm-4">
+                            <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>  
+                          </div>
+                          <div class="feature-box-pad feature-box col-lg-4 col-sm-4">
+                            <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>  
+                          </div>
+                          
+                        </div>
+                     </div>
+    
+                    </div>
+                  </div>
+                 
+
+                <div class="feature-box col-lg-4 col-sm-4 about-pad2">
+                  <div class="card car-back" style="width: 18rem;">
+                    <div class="about-shyam-pic">
+                      <img class="card-img-top  shyam-pic" src="Assets/" alt="">
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title"></h3>
+                      <p class="card-text">
+                        <h5>[ Front-end developer ]</h5></p>
+                        <div class="row">
+                          <div class="feature-box-pad feature-box col-lg-4 col-sm-4">
+                            <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                          </div>
+                          <div class="feature-box-pad feature-box col-lg-4 col-sm-4">
+                            <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>  
+                          </div>
+                          <div class="feature-box-pad feature-box col-lg-4 col-sm-4">
+                            <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>  
+                          </div>
+                          
+                        </div>
+                    </div>
+                  </div>
+                </div>
+               
+                <div class="feature-box col-lg-4 col-sm-4  about-img-pad">
+                  <img class="about-img" src="Assets/aboutus_page_svg.svg" alt="kid coding"> 
+                </div>
+
+              </div>
+           </div>
+
+           
+      
+
+         </section>
+
+
+    <!--Footer-->
+      
+       <!--Section 4-->
+          <section>
+            <footer>
+          <div class="Parent-footer">
+            <div class="footer-tbox-parent-back">
+              <div class="footer-tbox">
+                <div class="row footer-tbox-back">
+                    
+                    <div class="feature-box footer-main-heading col-lg-6 col-sm-6">
+                      <h3>Find better weather result now</h3>
+                    </div>
+                     
+                    <div class="feature-box footer-main-button col-lg-6 col-sm-6">
+                      <button type="button" class="btn btn-dark">Results</button>
+                    </div>
+
+                </div>
+              </div>
+          </div>
+
+          <div class="footer-section-background">
+           <div class="row">
+             <div class="feature-box-pad feature-box col-lg-4 col-sm-4 footer-feature-box footer-fbox-pad1">
+               
+                <h4>Features</h4>
+                 <ul style="list-style: none;">
+                   <li>10 Day weather forecast</li>
+                   <li>UV Radition</li>
+                   <li>Air Pollution</li>
+                   <li>Air Quality Index</li>
+                 </ul>
+             </div>
+     
+             <div class="feature-box-pad feature-box col-lg-4 col-sm-4 footer-feature-box footer-fbox-pad2">
+               
+               <h4>Weather.io</h3>
+                 <ul style="list-style: none;">
+                   <li>About us</li>
+                   <li>OpenWeather API</li>
+                   <li>FAQ</li>
+                   <li>Contact us</li>
+                 </ul>
+               
+             </div>
+     
+             <div class="feature-box-pad feature-box col-lg-4 col-sm-4 footer-feature-box footer-fbox-pad3">
+                <div>
+                  <h4>Connect with us</h4>
+                    <div class="row">
+                      <div class="feature-box-pad feature-box col-lg-2 col-sm-2">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                      </div>
+                      <div class="feature-box-pad feature-box col-lg-2 col-sm-2">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M510.486,284.482l-27.262-83.963c.012.038.016.077.028.115-.013-.044-.021-.088-.033-.132v-.01L429.1,33.871a21.328,21.328,0,0,0-20.445-14.6A21.038,21.038,0,0,0,388.466,34L337.094,192.154H175L123.533,33.989A21.033,21.033,0,0,0,103.35,19.274h-.113A21.467,21.467,0,0,0,82.86,34L28.888,200.475l-.008.021v0c-.013.042-.019.084-.033.127.012-.038.017-.077.029-.115L1.514,284.482a30.6,30.6,0,0,0,11.117,34.283L248.893,490.427c.035.026.074.041.109.067.1.072.2.146.3.214-.1-.065-.187-.136-.282-.2l0,0c.015.012.033.02.05.031s.027.015.041.024l.006,0a11.992,11.992,0,0,0,1.137.7c.054.03.1.068.157.1l0,0c.033.016.064.038.1.054s.053.02.077.032.038.015.056.023c.044.021.092.034.136.057.205.1.421.178.633.264.2.082.389.177.592.248l.025.011c.034.012.064.028.1.04s.083.032.125.046l.05.012c.053.016.11.024.163.039.019.006.042.009.063.015.284.086.579.148.872.213.115.026.225.062.341.083.017,0,.032.009.05.012.038.008.073.021.112.027.062.011.122.031.186.04.049.007.1,0,.151.012h.033a11.918,11.918,0,0,0,1.7.136h.019a11.971,11.971,0,0,0,1.7-.136h.033c.05-.008.1,0,.153-.012s.124-.029.187-.04c.038-.006.073-.019.11-.027.017,0,.032-.009.049-.012.118-.023.231-.059.349-.084.288-.064.578-.126.861-.21.019-.006.039-.008.059-.014.055-.017.113-.024.169-.041.016-.006.035-.007.051-.012.044-.013.086-.032.129-.047s.063-.028.1-.041l.026-.01c.214-.076.417-.175.627-.261s.394-.154.584-.245c.047-.023.1-.036.142-.059.018-.009.04-.015.058-.024s.053-.02.078-.033.068-.04.1-.056l0,0c.056-.028.106-.069.161-.1a12.341,12.341,0,0,0,1.132-.695c.029-.02.062-.035.092-.056.008-.006.017-.009.024-.015.035-.026.076-.043.11-.068l236.3-171.666A30.6,30.6,0,0,0,510.486,284.482ZM408.8,49.48l46.342,142.674H362.46Zm-305.6,0,46.428,142.675H56.948ZM26.817,299.251a6.526,6.526,0,0,1-2.361-7.308l20.34-62.42L193.835,420.6Zm38.245-82.972h92.411L223.354,419.22Zm183.416,273.83c-.047-.038-.092-.079-.138-.118-.009-.008-.018-.018-.028-.026-.091-.075-.18-.152-.268-.231-.172-.15-.341-.3-.5-.462.014.012.029.022.043.035l.055.046a12.191,12.191,0,0,0,1.091.929l.012.011c.018.013.033.03.051.045C248.689,490.263,248.58,490.19,248.478,490.109Zm7.514-48.482L217.226,322.21,182.839,216.279H329.253Zm7.935,48.107c-.091.079-.178.157-.27.233l-.032.028c-.047.038-.091.079-.136.117-.1.08-.209.152-.313.229.018-.013.033-.032.053-.044l.009-.009a11.69,11.69,0,0,0,1.086-.926c.014-.013.03-.024.044-.036s.038-.03.054-.047C264.262,489.435,264.1,489.586,263.927,489.734Zm90.7-273.455h92.4l-18.91,24.23-139.468,178.7Zm130.567,82.967L318.2,420.563,467.284,229.538l20.258,62.393A6.528,6.528,0,0,1,485.189,299.246Z"/></svg>
+                      </div>
+                      <div class="feature-box-pad feature-box col-lg-2 col-sm-2">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                      </div>
+                      <div class="feature-box-pad feature-box col-lg-2 col-sm-2">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
+                      </div>
+                      <div class="feature-box-pad feature-box col-lg-2 col-sm-2">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"/></svg>
+                      </div>
+                      <div class="feature-box-pad feature-box col-lg-2 col-sm-2">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M14 95.7924C14 42.8877 56.8878 0 109.793 0H274.161C327.066 0 369.954 42.8877 369.954 95.7924C369.954 129.292 352.758 158.776 326.711 175.897C352.758 193.019 369.954 222.502 369.954 256.002C369.954 308.907 327.066 351.795 274.161 351.795H272.081C247.279 351.795 224.678 342.369 207.666 326.904V415.167C207.666 468.777 163.657 512 110.309 512C57.5361 512 14 469.243 14 416.207C14 382.709 31.1945 353.227 57.2392 336.105C31.1945 318.983 14 289.5 14 256.002C14 222.502 31.196 193.019 57.2425 175.897C31.196 158.776 14 129.292 14 95.7924ZM176.288 191.587H109.793C74.2172 191.587 45.3778 220.427 45.3778 256.002C45.3778 291.44 73.9948 320.194 109.381 320.416C109.518 320.415 109.655 320.415 109.793 320.415H176.288V191.587ZM207.666 256.002C207.666 291.577 236.505 320.417 272.081 320.417H274.161C309.737 320.417 338.576 291.577 338.576 256.002C338.576 220.427 309.737 191.587 274.161 191.587H272.081C236.505 191.587 207.666 220.427 207.666 256.002ZM109.793 351.795C109.655 351.795 109.518 351.794 109.381 351.794C73.9948 352.015 45.3778 380.769 45.3778 416.207C45.3778 451.652 74.6025 480.622 110.309 480.622C146.591 480.622 176.288 451.186 176.288 415.167V351.795H109.793ZM109.793 31.3778C74.2172 31.3778 45.3778 60.2173 45.3778 95.7924C45.3778 131.368 74.2172 160.207 109.793 160.207H176.288V31.3778H109.793ZM207.666 160.207H274.161C309.737 160.207 338.576 131.368 338.576 95.7924C338.576 60.2173 309.737 31.3778 274.161 31.3778H207.666V160.207Z"/></svg>
+                      </div>
+                    </div>
+                 </div>
+
+               <div>
+                 <h4>Subscribe</h4>
+                   <div class="input-group">
+                     <input type="search" class="form-control rounded" placeholder="Enter your E-mail address" aria-label="Search" aria-describedby="search-addon" />
+                     <button type="button" class="btn btn-dark">search</button>
+                   </div>
+               </div>
+               
+             </div>
+           </div>
+          </div>
+          </div>    
+               
+               <div class="footer-section-background">
+                     <div class="footer-section-background footer-line">
+                         <hr>
+                     </div>
+                    <div class="copyright-pad">
+                      &copy; 2022 All rights reserved.
+                    </div>
+               </div>
+
+            </footer>
+
+          </section>
+
+
+
+
+         <!--Div 4.1-->
+         <!--Div 4.2-->
+         <!--Div 4.3-->
+    
+         <script src="app.js"></script>
+ </body>
+</html>

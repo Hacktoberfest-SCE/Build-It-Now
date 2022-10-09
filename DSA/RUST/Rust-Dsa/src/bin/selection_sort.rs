@@ -1,3 +1,5 @@
+#![feature(test)]
+extern crate test;
 fn main() {
     let mut a = vec!['e', 'd', 'c', 'b', 'a'];
     println!("Before Sort:{:?}", a);
@@ -19,7 +21,7 @@ fn selection_sort<T: PartialEq + PartialOrd + Copy>(array: &mut Vec<T>) {
 }
 
 #[cfg(test)]
-mod test {
+mod tests {
     use super::*;
 
     #[test]
@@ -39,5 +41,12 @@ mod test {
         let mut a = vec!['e', 'd', 'c', 'b', 'a'];
         selection_sort(&mut a);
         assert_eq!(a, vec!['a', 'b', 'c', 'd', 'e']);
+    }
+
+    #[bench]
+    fn time_complexity(b: &mut test::Bencher) {
+        let mut array = vec![1, 9, 6, 10000, 8];
+
+        b.iter(|| selection_sort(&mut array))
     }
 }

@@ -1,3 +1,5 @@
+#![feature(test)]
+extern crate test;
 fn main() {
     let a = [5, 4, 3, 2, 1, 0];
 
@@ -38,5 +40,12 @@ mod tests {
     fn test_char() {
         let array = ['a', 'b', 'c', 'd', 'e'];
         assert_eq!(min_max(&array), ('e', 'a'));
+    }
+
+    #[bench]
+    fn time_complexity(b: &mut test::Bencher) {
+        let array = [1, 9, 6, 10000, 8];
+
+        b.iter(|| min_max(&array))
     }
 }

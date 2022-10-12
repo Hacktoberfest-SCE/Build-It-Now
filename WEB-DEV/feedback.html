@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://localhost/project/TS/web/style.css">
+
+    <title>feedback</title>
+</head>
+<body>
+    <div class="full-page">
+        <a href="http://localhost/project/TS/web/PROFILE.HTML"><button class="btn" id="b4" >HOME PAGE</button></a>
+
+        <div class="feedback" id="form">
+            <p id="hl"> <H2>Feedback Form</H2></p>
+            <form action="http://localhost/feedback.php" method="post">
+                <label for="refno">Reference Number</label><br>
+                <input type="text" name="refno" placeholder="Reference Number"><br>
+                <label for="feed1">1)  Question 1</label><br>
+                <ul>
+                    <li><label for="good" style="font-size: 15px; ">GOOD</label>
+                        <input type="radio" name="opt1" value="good"><br></li>
+                    <li><label for="average"style="font-size: 15px; ">AVERAGE</label>
+                        <input type="radio" name="opt1" value="average"><br></li>
+                    <li><label for="not good"style="font-size: 15px; ">NOT GOOD</label>
+                        <input type="radio" name="opt1" value="not good" ><br></li>
+                    
+                </ul>
+                <label for="feed1">1)  Question 2</label><br>
+                <ul>
+                    <li><label for="good" style="font-size: 15px; ">GOOD</label>
+                        <input type="radio" name="opt2" value="good"   ><br></li>
+                    <li><label for="average"style="font-size: 15px; ">AVERAGE</label>
+                        <input type="radio" name="opt2" value="average"  ><br></li>
+                    <li><label for="not good"style="font-size: 15px; ">NOT GOOD</label>
+                        <input type="radio" name="opt2" value="not good" ><br></li>
+                    
+                </ul>
+                <label for="feed1">1)  Question 3</label><br>
+                <ul>
+                    <li><label for="good" style="font-size: 15px; ">GOOD</label>
+                        <input type="radio" name="opt3" value="good" ><br></li>
+                    <li><label for="average"style="font-size: 15px; ">AVERAGE</label>
+                        <input type="radio" name="opt3" value="average"  ><br></li>
+                    <li><label for="not good"style="font-size: 15px; ">NOT GOOD</label>
+                        <input type="radio" name="opt3" value="not good" ><br></li>
+                    
+                </ul>
+                <label for="feed1">1)  Question 4</label><br>
+                <ul>
+                    <li><label for="good" style="font-size: 15px; ">GOOD</label>
+                        <input type="radio" name="opt4" value="good"  ><br></li>
+                    <li><label for="average"style="font-size: 15px; ">AVERAGE</label>
+                        <input type="radio" name="opt4" value="average" ><br></li>
+                    <li><label for="not good"style="font-size: 15px; ">NOT GOOD</label>
+                        <input type="radio" name="opt4" value="not good"  ><br></li>
+                    
+                </ul>
+                <br><br>
+                <label for="remarks">REMARKS OR ANY SUGGESTION</label><br>
+                <textarea placeholder="write here" rows="5" cols="20" name="re"> </textarea> <br> 
+                
+                <input type="submit" value="submit">
+
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

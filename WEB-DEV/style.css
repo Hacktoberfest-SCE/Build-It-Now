@@ -1,0 +1,186 @@
+#i1 {border-radius: 50%; }
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.full-page 
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center;
+    background-image: url('http://localhost/project/TS/web/img/b1.png');
+    color:whitesmoke;
+
+}
+h2
+{
+    font-size: 2em;
+}
+hr
+{
+    color: gold;
+}
+.navbar
+{
+    display: flex;
+    
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right:30px;
+    padding-top: 10px;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+display: inline-block;
+margin-right: 100px;
+position: sticky;
+text-align: right;
+}
+nav ul li a
+{
+text-decoration: none;
+font-size: 20px;
+font-family: 'Times New Roman', Times, serif;
+}
+nav ul li button
+{
+font-size: 20px;
+outline: none ;
+font-family: 'Courier New', Courier, monospace;
+cursor: pointer;
+}
+nav ul li button:hover
+{
+    background-color: lightgoldenrodyellow;
+     
+}
+nav ul li a:hover
+{
+color: gold;
+}
+a
+{
+    font-size : 20px;
+    color: floralwhite;
+}
+.login-form
+{
+    border-style: double;
+    text-align: center;
+}
+form
+{
+   
+    max-width: 600px;
+    border: double;
+    margin: 30px;
+    color: lightgoldenrodyellow;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    position:relative;
+    backdrop-filter: blur(5px);
+}
+label
+{
+    font-size: 20px;
+    padding: 10px;
+}
+input
+{
+    margin: 4px;
+}
+input:hover
+{
+    transform: scale(1.2);
+}
+#hl
+{
+    display: inline-block;
+    padding: 20px;
+    text-align: centre;
+}
+.signup
+{
+    text-align: center;
+}
+.btn
+{
+    width: auto;
+    text-align: right;
+    
+    border: rgb(16, 9, 1);
+    border-style: groove; 
+
+}
+.btn#b3
+{
+    display: inline-block;
+    padding: 3px;
+    background-color: lightyellow;
+    margin: 5px;
+    
+}
+.form1
+{
+    display: block;
+    text-align: center;
+    border-style: double;
+    
+}
+.btn#b4
+{
+    margin: 5px; background-color: lightyellow;position: sticky;top:0;
+    padding: 1px;float: left;
+}
+.feedback
+{
+    size: auto;
+    display: block;
+    text-align: center;
+    background-image: url('');
+    
+}
+.feedback ul li
+{
+display: block;
+float:left;
+list-style: none;
+}
+.btn:hover
+{
+    transform: scale(1.05);
+}
+.display
+{
+   text-align: left;
+    color:  lightgoldenrodyellow;
+    max-width: 1200px;
+    display: inline-block;
+    position: absolute;
+    backdrop-filter: blur(6px) ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 371px;
+    height: 287px;
+    font-size: 19px;
+}

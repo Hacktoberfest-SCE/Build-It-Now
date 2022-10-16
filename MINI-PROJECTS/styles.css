@@ -1,0 +1,78 @@
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+.header_bg1 {
+  background-image: url("https://internship.suvenconsultants.com/projects/Alumni%20Management%20System_shashank/images/slider_bg.jpg");
+}
+
+.navbar-options {
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(252, 43, 43);
+}
+
+.heading {
+  color: rgb(66, 61, 61);
+}
+
+.heading:hover {
+  color: rgb(252, 43, 43);
+}
+
+#content {
+  color: rgb(66, 61, 61);
+  background-color: rgb(231, 223, 223);
+}
+
+.card {
+  text-align: center;
+}
+
+.card-head {
+  color: rgb(66, 61, 61);
+}
+
+.card-head:hover {
+  color: rgb(252, 43, 43);
+}
+
+.nav-icon {
+  color: white;
+  padding: 10% 10% 10% 10%;
+}
+
+.nav-icon:hover {
+  background-color: red;
+}
+
+.social-icons {
+  padding-left: 33%;
+}
+
+.nav-item:hover {
+  background-color: red;
+}
+
+.blog-awesome:hover {
+  color: red;
+}
+
+.blog-awesome {
+  padding: 1% 1% 1% 1%;
+}
+
+.tag-button {
+  padding: 1% 1% 1% 1%;
+}
+
+.btn-tag {
+  background-color: rgb(65, 63, 63);
+  color: white;
+}
+
+.blog-heading:hover {
+  color: red;
+}

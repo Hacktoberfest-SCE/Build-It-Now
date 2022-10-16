@@ -1,0 +1,91 @@
+.border-style{
+	color: skyblue;
+	text-decoration:none;
+	text-transform: uppercase;
+	transition: .5s; 
+	display: inline-block;
+	padding: 13px 18px;
+	overflow: hidden;
+	position: relative;
+	margin-top: -10px;
+	
+}
+.border-style:hover{
+	background: skyblue;
+	color:#050801;
+	box-shadow: 0 0 5px skyblue,
+		0 0 25px skyblue,
+		0 0 50px skyblue,
+		0 0 20px skyblue;
+}
+.border-style span{
+	position: absolute;
+	display: block;
+}
+.border-style span:nth-child(1){
+	top: 0;
+	left: -100;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,skyblue);
+	animation: ani 1s linear infinite;
+}
+@keyframes ani{
+	0%{
+		left: -100%;
+	}
+	50%,100%{
+		left: 100%;
+	}
+}
+.border-style span:nth-child(2){
+	top: -100%;
+	right: 0;
+	width: 2px ;
+	height:100%;
+	background: linear-gradient(180deg,transparent,skyblue);
+	animation: ani1 1s linear infinite;
+	animation-delay: 0.25s;
+}
+@keyframes ani1{
+	0%{
+		top: -100%;
+	}
+	50%,100%{
+		top: 100%;
+	}
+}
+.border-style span:nth-child(3){
+	bottom:0;
+	right: -100%;
+	width: 100%;
+	height:2px;
+	background: linear-gradient(270deg,transparent,skyblue);
+	animation: ani2 1s linear infinite;
+	animation-delay: 0.5s;
+}
+@keyframes ani2{
+	0%{
+		right: -100%;
+	}
+	50%,100%{
+		right: 100%;
+	}
+}
+.border-style span:nth-child(4){
+	bottom: -100%;
+	left: 0;
+	width: 2px ;
+	height:100%;
+	background: linear-gradient(360deg,transparent,skyblue);
+	animation: ani3 1s linear infinite;
+	animation-delay: 0.75s;
+}
+@keyframes ani3{
+	0%{
+		bottom: -100%;
+	}
+	50%,100%{
+		bottom: 100%;
+	}
+}

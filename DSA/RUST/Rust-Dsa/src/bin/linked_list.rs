@@ -1,53 +1,60 @@
+use std::cell::RefCell;
+
+use std::rc::Rc;
+
 fn main() {
-    let mut l = List::<i64>::create_list();
-    l.append_node(5);
-    l.append_node(6);
-    l.append_node(7);
+    let l = List::<i64>::create_list();
+    l.borrow().append_node(1);
+    l.borrow().append_node(2);
     println!("{:?}", l);
 }
 
-#[derive(Debug, PartialEq)]
-struct Node<T: PartialEq> {
+#[derive(Debug, PartialEq, Clone)]
+struct Node<T: PartialEq + Clone + Copy> {
     data: T,
-    next: Option<Box<Node<T>>>,
+    next: Option<Rc<RefCell<Node<T>>>>,
 }
 
 #[derive(Debug)]
-struct List<T: PartialEq> {
-    start: Box<Node<T>>,
+struct List<T: PartialEq + Clone + Copy> {
+    start: Rc<RefCell<Node<T>>>,
 }
 
-impl<T: PartialEq> List<T> {
-    fn create_list() -> Box<List<i32>> {
+impl<T: PartialEq + Clone + Copy> List<T> {
+    fn create_list() -> Rc<RefCell<List<i32>>> {
         let newnode = Node::newnode(0);
-        Box::new(List { start: newnode })
+        Rc::new(RefCell::new(List { start: newnode }))
     }
 
-    fn append_node(&mut self, data: T) {
+    fn append_node(&self, data: T) {
         let newnode = Node::newnode(data);
-        let mut t = self.start.as_mut();
-        while t.next != None {
-            t = t.next.as_mut().unwrap();
+
+        let mut node = self.start.clone();
+
+        while node.next != None {
+            let next = node.next;
+            // node = next.unwrap().borrow_mut();
         }
-        t.next = Some(newnode);
+        node.next = Some(newnode);
     }
 
-    fn delete_node(&mut self) {
-        let mut t = self.start.as_mut();
-        let mut parent = &t;
-        while t.next != None {
-            t = t.next.as_mut().unwrap();
-            parent = &t;
-        }
-        *(parent).next = None;
-    }
+    // fn delete_node(&mut self) {
+    //     let node = self.start.clone();
+    //     let mut parent = *node.borrow();
+    //     while node.borrow().next != None {
+    //         *node.borrow_mut() = *node.borrow().next.unwrap().borrow();
+    //         parent = *node.borrow();
+    //     }
+
+    //     parent.next = None;
+    // }
 }
 
-impl<T: PartialEq> Node<T> {
-    fn newnode(data: T) -> Box<Node<T>> {
-        Box::new(Self {
+impl<T: PartialEq + Clone + Copy> Node<T> {
+    fn newnode(data: T) -> Rc<RefCell<Node<T>>> {
+        Rc::new(RefCell::new(Self {
             data: data,
             next: None,
-        })
+        }))
     }
 }

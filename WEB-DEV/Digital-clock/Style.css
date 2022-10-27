@@ -13,6 +13,9 @@ body {
     background: rgb(70, 70, 70);
 }
 
+h1   {color: red;
+        font-size: 50px;}
+
 .container {
     width: fit-content;
     height: fit-content;

@@ -19,6 +19,10 @@ body {
   transition: 0.3s background-color, 0.3s color;
 }
 
+h3 {
+  color: #0061d2;
+}
+
 body.dark-mode {
   color: var(--light);
   background-color: var(--dark);

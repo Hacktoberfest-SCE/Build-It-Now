@@ -6,6 +6,12 @@ body {
     padding: 75px 3vw;
 }
 
+h1 {
+    color: red;
+    font-size: 40px;
+    font-weight: 500;
+}
+
 .dark-theme {
     background-color: hsl(230, 17%, 14%) !important;
 }

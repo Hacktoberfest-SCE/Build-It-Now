@@ -1,0 +1,46 @@
+.signin-form{background: steelblue;border: 1px solid red;box-shadow: 5px 7px 5px rgb(50,66,69);border-radius: 20px;width: 80%;margin:30px;
+}.signin-form td{text-align: right;font-family: sans-serif;padding: 7px;margin: auto 0px;
+}
+.signin-form input,select{width: 200px;height: 30px;border : 2px solid green;cursor: pointer;text-indent: 20px;
+}
+.signin-form input:focus ,select:focus{border : 2px solid red;
+}
+.signin-form input[type="submit"],input[type="reset"]{width: 100px;margin-left: 10px;font-family: sans-serif;font-size: 15px;border-radius: 30px;border:2px solid pink;background: white;
+}
+.signin-form input:hover ,select:hover{border: 2px solid skyblue;
+}
+.signin-form input[type="submit"]:hover,input[type="reset"]:hover{transform: scale(1.1);
+}
+.signin-form .span_message{color: red;font-size: 30px;
+}
+.signin-form .emessage{color: red;
+}
+.option-btn{width: 90%;background:#3172a8;text-align: left;margin-top: -15px;margin-left: 60px;font-family: sans-serif;
+}
+.option-btn span{margin: 5px;padding:auto 10px;font-size: 15px;color: #d63c04;
+}
+.option-btn button{border: none;background: none;font-size: 20px;color: white;
+}
+.option-btn button:hover{text-decoration: underline;color: #d63c04;
+}
+.animate{
+ -webkit-animation: animatezoom 0.6s;
+ animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+ from {-webkit-transform: scale(0)}
+ to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+@media screen and(max-width: 300px){
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}

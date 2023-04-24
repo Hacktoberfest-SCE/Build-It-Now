@@ -1,0 +1,39 @@
+<?php
+// sql query to fetch all the data
+$result = mysqli_query($mysqli,"SELECT * FROM admin_login );
+
+$i=0;
+while($DB_ROW = mysqli_fetch_array($result)) {
+?>
+
+<table border=1>
+    <thead class="thead-dark"> 
+        <tr>
+            <th>Admin</th>
+            <th>Info</th>
+        </tr>
+    </thead>
+        <tbody>
+<tr>
+    <td>User Name</td>
+    <td><?php echo $DB_ROW["name"]; ?></td>
+</tr>
+<tr>
+        <td>User Id</td>
+        <td><?php echo $DB_ROW["personal_number"]; ?></td>
+</tr>
+
+<tr>
+        <td>gender</td>
+        <td><?php echo $DB_ROW["gender"]; ?></td>
+</tr>
+    
+</tbody>
+    </table>
+
+
+ <?php
+$i++;
+}
+?>
+</html>

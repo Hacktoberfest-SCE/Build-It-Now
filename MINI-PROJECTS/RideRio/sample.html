@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Favorites</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  .item img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+  }
+  .remove-btn {
+    color: red;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>My Favorites</h2>
+  <div id="favoritesList"></div>
+</div>
+
+<script>
+  const favoritesList = document.getElementById('favoritesList');
+  
+  function addToFavorites(item) {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('item');
+    itemDiv.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <span>${item.name}</span>
+      <span class="remove-btn" onclick="removeFromFavorites(this, '${item.name}')">Remove</span>
+    `;
+    favoritesList.appendChild(itemDiv);
+  }
+  
+  function removeFromFavorites(button, itemName) {
+    const itemDiv = button.parentElement;
+    favoritesList.removeChild(itemDiv);
+  }
+  
+  const initialFavorites = [
+    { name: 'Item 1', image: 'item1.jpg' },
+    { name: 'Item 2', image: 'item2.jpg' },
+    { name: 'Item 3', image: 'item3.jpg' }
+  ];
+  
+  initialFavorites.forEach(item => addToFavorites(item));
+</script>
+</body>
+</html>

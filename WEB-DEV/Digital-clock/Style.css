@@ -10,10 +10,10 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
-    background: rgb(70, 70, 70);
+    background: rgb(107, 104, 104);
 }
 
-h1   {color: red;
+h1   {color: rgb(245, 2, 2);
         font-size: 50px;}
 
 .container {
@@ -29,6 +29,6 @@ h1   {color: red;
     padding: 0px 30px;
     font-size: 5em;
     font-weight: 600;
-    color: rgb(69, 69, 69);
+    color: rgb(32, 26, 26);
     scale: 0.7;
 }

@@ -8,27 +8,33 @@
 body {
     width: 100vw;
     height: 100vh;
-    display: grid;
-    place-items: center;
-    background: rgb(70, 70, 70);
-}
-
-h1   {color: red;
-        font-size: 50px;}
-
-.container {
-    width: fit-content;
-    height: fit-content;
-    background: linear-gradient(360deg, rgb(137, 137, 137), rgb(173, 174, 174));
-    border-radius: 8px;
-    box-shadow: 0px 0px 6px rgb(182, 180, 180);
-    font-family: 'DotGothic16', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 30px;
-    font-size: 5em;
+    background: rgb(70, 70, 70);
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.clock-title {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.container {
+    background: linear-gradient(360deg, rgb(137, 137, 137), rgb(173, 174, 174));
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px rgb(182, 180, 180);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 3em;
     font-weight: 600;
     color: rgb(69, 69, 69);
-    scale: 0.7;
+}
+
+.hour, .minutes, .seconds {
+    color: rgb(0, 0, 0);
+    margin: 0 5px;
 }
